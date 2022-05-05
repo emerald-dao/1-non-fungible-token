@@ -2,7 +2,9 @@
 
 Make sure you have the latest version of FCL: https://docs.onflow.org/flow-cli/install/
 
-Next, open 4 terminals (lol)
+Next, make sure to `npm install`.
+
+Then, open 4 terminals (lol)
 
 1. In the first terminal, run `npm run dev`
 
