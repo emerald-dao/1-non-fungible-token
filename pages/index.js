@@ -150,7 +150,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>0-NFT</title>
+        <title>1-SIMPLE-NFT</title>
         <meta name="description" content="Used by Emerald Academy" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

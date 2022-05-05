@@ -9,7 +9,7 @@ const TESTNET_WALLET = "https://fcl-discovery.onflow.org/testnet/authn";
 const TESTNET_ADDRESS = "";
 
 fcl.config({
-  "app.detail.title": "0-NFT", // this adds a custom name to our wallet
+  "app.detail.title": "1-SIMPLE-NFT", // this adds a custom name to our wallet
   "app.detail.icon": "https://i.imgur.com/nRX6VfZ.png", // this adds a custom image to our wallet
   "accessNode.api": EMULATOR_ACCESSNODE, // this is for the local emulator
   "discovery.wallet": EMULATOR_WALLET, // this is for the local dev wallet
