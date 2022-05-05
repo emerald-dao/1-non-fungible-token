@@ -6,9 +6,24 @@
 		}
 	},
 	"contracts": {
-		"NonFungibleToken": "./flow/cadence/NonFungibleToken.cdc",
-		"FungibleToken": "./flow/cadence/utility/FungibleToken.cdc",
-		"MetadataViews": "./flow/cadence/MetadataViews.cdc",
+		"NonFungibleToken": {
+			"source": "./flow/cadence/NonFungibleToken.cdc",
+			"aliases": {
+				"testnet": "0x631e88ae7f1d7c20"
+			}
+		},
+		"FungibleToken": {
+			"source": "./flow/cadence/utility/FungibleToken.cdc",
+			"aliases": {
+				"testnet": "0x9a0766d93b6608b7"
+			}
+		},
+		"MetadataViews": {
+			"source": "./flow/cadence/MetadataViews.cdc",
+			"aliases": {
+				"testnet": "0x631e88ae7f1d7c20"
+			}
+		},
 		"ExampleNFT": "./flow/cadence/ExampleNFT.cdc"
 	},
 	"networks": {

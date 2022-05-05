@@ -21,8 +21,8 @@ export default function Home() {
 
     const result = await fcl.send([
       fcl.script`
-      import ExampleNFT from 0xf8d6e0586b0a20c7
-      import MetadataViews from 0xf8d6e0586b0a20c7
+      import ExampleNFT from 0xDeployer
+      import MetadataViews from 0xDeployer
 
       pub fun main(address: Address): [NFT] {
         let collection = getAccount(address).getCapability(ExampleNFT.CollectionPublicPath)
@@ -81,8 +81,8 @@ export default function Home() {
 
     const result = await fcl.send([
       fcl.transaction`
-      import ExampleNFT from 0xf8d6e0586b0a20c7
-      import NonFungibleToken from 0xf8d6e0586b0a20c7
+      import ExampleNFT from 0xDeployer
+      import NonFungibleToken from 0xDeployer
 
       transaction(recipient: Address, withdrawID: UInt64) {
         let ProviderCollection: &ExampleNFT.Collection{NonFungibleToken.Provider}
@@ -119,9 +119,9 @@ export default function Home() {
 
     const transactionId = await fcl.send([
       fcl.transaction`
-      import ExampleNFT from 0xf8d6e0586b0a20c7
-      import NonFungibleToken from 0xf8d6e0586b0a20c7
-      import MetadataViews from 0xf8d6e0586b0a20c7
+      import ExampleNFT from 0xDeployer
+      import NonFungibleToken from 0xDeployer
+      import MetadataViews from 0xDeployer
 
       transaction() {
         

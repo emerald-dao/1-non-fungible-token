@@ -20,9 +20,9 @@ async function mintNFTs() {
   try {
     const transactionId = await fcl.send([
       fcl.transaction`
-      import ExampleNFT from 0xf8d6e0586b0a20c7
-      import NonFungibleToken from 0xf8d6e0586b0a20c7
-      import MetadataViews from 0xf8d6e0586b0a20c7
+      import ExampleNFT from 0xDeployer
+      import NonFungibleToken from 0xDeployer
+      import MetadataViews from 0xDeployer
       
       transaction(names: [String], descriptions: [String], thumbnails: [String]) {
         let RecipientCollection: &ExampleNFT.Collection{NonFungibleToken.CollectionPublic}
