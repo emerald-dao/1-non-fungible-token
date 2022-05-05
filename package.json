@@ -1,0 +1,25 @@
+{
+  "name": "1-simple-nft",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "mint": "node ./actions/mint_nfts.js"
+  },
+  "dependencies": {
+    "@onflow/fcl": "^0.0.78",
+    "@onflow/types": "^0.0.6",
+    "elliptic": "^6.5.4",
+    "next": "12.1.6",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "sha3": "^2.1.4"
+  },
+  "devDependencies": {
+    "eslint": "8.14.0",
+    "eslint-config-next": "12.1.6"
+  }
+}
