@@ -1,6 +1,8 @@
 # Steps to make this work:
 
-Open 4 terminals (lol)
+Make sure you have the latest version of FCL: https://docs.onflow.org/flow-cli/install/
+
+Next, open 4 terminals (lol)
 
 1. In the first terminal, run `npm run dev`
 
