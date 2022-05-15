@@ -129,7 +129,7 @@ Click on the Get NFT’s button:
 
 🚨🚨🚨 TODO: ADD IMAGE HERE 🚨🚨🚨
 
-🔏 You can also check out your smart contract `ExampleNFT  .cdc` in `flow/cadence/HelloWorld.cdc`.
+🔏 You can also check out your smart contract `ExampleNFT.cdc` in `flow/cadence/HelloWorld.cdc`.
 
 💼 Take a quick look at how your contract get deployed in `flow.json`.
 
@@ -144,11 +144,6 @@ Click on the Get NFT’s button:
 Before trying to transfer, make sure to set up the Collection on that user’s account by logging into that account and clicking “Setup Collection”
 
 
-
-1. Log into the front end by clicking "Log in" and then selecting the first account.
-2. In a terminal, run `npm run mint`. That will mint 3 NFTs to the Service Account (0xf8d6e0586b0a20c7) 
-3. Click "Get NFTs". You'll see 3 NFTs appear. 
-4. You can transfer them to another account by pasting in another accounts address and pressing transfer, but you must make sure you set up their collection on the other account by logging into that account and clicking "setup collection" first.
 
 ---
 
