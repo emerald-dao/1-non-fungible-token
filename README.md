@@ -120,7 +120,7 @@ That will mint 3 NFTs to the Service Account (0xf8d6e0586b0a20c7)
 ---
 
 
-# Checkpoint 3: ✏️ Minting the NFT’s 
+# Checkpoint 3: ✏️ Getting the NFT’s 
 
 > ✏️ Now it’s time for what we’ve all been waiting for: MINTING NFT’s (unfortunately just on testnet)
 Click on the Get NFT’s button:
