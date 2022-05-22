@@ -1,31 +1,3 @@
-# Steps to make this work:
-
-Make sure you have the latest version of FCL: https://docs.onflow.org/flow-cli/install/
-
-Next, make sure to `npm install`.
-
-Then, open 4 terminals (lol)
-
-1. In the first terminal, run `npm run dev`
-
-2. In the second terminal, run `flow emulator start -v`
-
-3. In the third terminal, run `flow dev-wallet`
-
-4. In the fourth terminal, run `flow project deploy`
-
-## Playing around with the front end
-
-1. Log into the front end by clicking "Log in" and then selecting the first account.
-2. In a terminal, run `npm run mint`. That will mint 3 NFTs to the Service Account (0xf8d6e0586b0a20c7) 
-3. Click "Get NFTs". You'll see 3 NFTs appear. 
-4. You can transfer them to another account by pasting in another accounts address and pressing transfer, but you must make sure you set up their collection on the other account by logging into that account and clicking "setup collection" first.
-
-
-
-
-
-
 # 💎 Emerald Academy
 
 ## 🚩 Challenge 1: 🍀 Simple NFT 🤓
@@ -66,18 +38,12 @@ cd 1-simple-nft
 flow emulator start -v
 ```
 
-> in a third terminal window, 💸 start your local wallet:
-
-```bash
-cd 1-simple-nft
-flow dev-wallet
-```
-
-> in a fourth terminal window, 💾 deploy your contract:
+> in a third terminal window, 💾 deploy your contract and 💸 start your local wallet:
 
 ```bash
 cd 1-simple-nft
 flow project deploy
+flow dev-wallet
 ```
 
 > You can `flow project deploy --update` to deploy a new contract any time.
@@ -95,7 +61,18 @@ You will see the user address now reflects the current logged in address
 
 ---
 
-# Checkpoint 2: 📘 Setup empty user Collection 
+# Checkpoint 2: 📘 Minting the NFT’s
+
+> In a terminal, run `npm run mint`. 
+
+🚨🚨🚨 TODO: ADD IMAGE HERE 🚨🚨🚨
+???
+
+That will mint 3 NFTs to the Service Account (0xf8d6e0586b0a20c7)
+
+---
+
+# Checkpoint 3: 📘 Setup empty user Collection 
 ???
 
 > 👀 Click the ‘Setup Collection’ button to setup your empty collection:
@@ -107,43 +84,76 @@ You will see the user address now reflects the current logged in address
 
 ---
 
-
-# Checkpoint 2?: 📘Minting the NFT’s
-
-> In a terminal, run `npm run mint`. 
-
-🚨🚨🚨 TODO: ADD IMAGE HERE 🚨🚨🚨
-???
-
-That will mint 3 NFTs to the Service Account (0xf8d6e0586b0a20c7)
-
----
-
-
-# Checkpoint 3: ✏️ Getting the NFT’s 
-
-> ✏️ Now it’s time for what we’ve all been waiting for: MINTING NFT’s (unfortunately just on testnet)
-Click on the Get NFT’s button:
-
-👀 You should see your New NFT’s appear inside your collection:
-
-🚨🚨🚨 TODO: ADD IMAGE HERE 🚨🚨🚨
-
-🔏 You can also check out your smart contract `ExampleNFT.cdc` in `flow/cadence/HelloWorld.cdc`.
-
-💼 Take a quick look at how your contract get deployed in `flow.json`.
-
-📝 If you want to make frontend edits, open `index.js` in `pages/index.js`.
-
----
-
-# Checkpoint 4: 💾 Transfer it!
+# Checkpoint 4: 💾 Transfer an NFT
 
 📔 You can transfer the NFT’s to another account by pasting in another account’s address and clicking transfer
 
 Before trying to transfer, make sure to set up the Collection on that user’s account by logging into that account and clicking “Setup Collection”
 
+---
 
+# Checkpoint 5: 💾 Deploy it to testnet!
+
+📔 Ready to deploy to a public testnet?!?
+
+🚨🚨🚨 TODO: ADD IMAGE HERE 🚨🚨🚨
+
+> 🔐 Generate a **deployer address** by typing `flow keys generate --network=testnet` into a terminal.
+
+🚨🚨🚨 TODO: ADD IMAGE HERE 🚨🚨🚨
+
+> 👛 Create your **deployer account** by going to https://testnet-faucet.onflow.org/, pasting in your public key from above, and clicking `CREATE ACCOUNT`: 
+
+🚨🚨🚨 TODO: ADD IMAGE HERE 🚨🚨🚨
+
+In your .env file, change the following:
+1. `NEXT_PUBLIC_ACCESS_NODE` to `https://testnet.onflow.org`
+2. `NEXT_PUBLIC_WALLET` to `https://fcl-discovery.onflow.org/testnet/authn` 
+3. `NEXT_PUBLIC_CONTRACT_ADDRESS` to your generated testnet address
+
+⛽️ Add your testnet account to `flow.json` as by modifying the following lines of code:
+
+```json
+"accounts": {
+  "emulator-account": {
+    "address": "f8d6e0586b0a20c7",
+    "key": "cdb3410ae829f5e2a29f71f53efbce66bde1187948d6317de6918d5003576ca7"
+  },
+  "testnet-account": {
+    "address": "YOUR GENERATED ADDRESS",
+    "key": {
+      "type": "hex",
+      "index": 0,
+      "signatureAlgorithm": "ECDSA_P256",
+      "hashAlgorithm": "SHA3_256",
+      "privateKey": "YOUR PRIVATE KEY"
+    }
+  }
+},
+"deployments": {
+  "emulator": {
+    "emulator-account": [
+      "NonFungibleToken",
+      "FungibleToken",
+      "MetadataViews",
+      "ExampleNFT"
+    ]
+  },
+  "testnet": {
+    "testnet-account": [
+      "ExampleNFT"
+    ]
+  }
+}
+```
+
+> Lastly, change the `PRIVATE_KEY` in .env to your testnet private key. NOTE: It is okay if you leak this private key, because this is a testnet account, and therefore not real. However, if you add a new line to the .gitignore file with ".env", you can prevent ever leaking your private key to things like GitHub.
+
+🚀 Deploy your ExampleNFT smart contract:
+
+```sh
+flow project deploy --network=testnet
+```
 
 ---
 

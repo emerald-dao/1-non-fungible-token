@@ -2,11 +2,10 @@ const fcl = require("@onflow/fcl");
 const { SHA3 } = require("sha3");
 var EC = require('elliptic').ec;
 var ec = new EC('p256');
-
-const PRIVATE_KEY = 'cdb3410ae829f5e2a29f71f53efbce66bde1187948d6317de6918d5003576ca7';
+require('dotenv').config();
 
 const sign = (message) => {
-  const key = ec.keyFromPrivate(Buffer.from(PRIVATE_KEY, "hex"));
+  const key = ec.keyFromPrivate(Buffer.from(process.env.PRIVATE_KEY, "hex"));
   const sig = key.sign(hash(message)); // hashMsgHex -> hash
   const n = 32;
   const r = sig.r.toArrayLike(Buffer, "be", n);
@@ -22,7 +21,7 @@ const hash = (message) => {
 
 const serverAuthorization = async (account) => {
 
-  const addr = "0xf8d6e0586b0a20c7";
+  const addr = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS;
   const keyId = 0;
 
   return {
