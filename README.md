@@ -7,7 +7,7 @@
 - The local Flow dev wallet to log into test accounts.
 - A template Next.js app with sample scripts and transactions to interact with your contract.
 
-🌟 The final deliverable is an app that lets users create an empty collection, mint some pre-loaded NFTs, and transfer them to another account on Flow testnet.
+🌟 The final deliverable is a DApp that lets users create an empty collection, mint some pre-loaded NFTs, and transfer them to another account on Flow testnet.
 
 💬 Meet other builders working on this challenge and get help in the [Emerald City Discord](https://discord.gg/emeraldcity)!
 
