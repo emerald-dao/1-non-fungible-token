@@ -38,6 +38,8 @@ cd 1-simple-nft
 flow emulator start -v
 ```
 
+*Note: the `-v` flag means to print transaction and script output to your local emulator*
+
 > in a third terminal window, 💾 deploy your contract and 💸 start your local wallet:
 
 ```bash
