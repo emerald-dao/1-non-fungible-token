@@ -70,7 +70,7 @@ flow dev-wallet
 
 The reason for this is because we haven't set up the user's account. Let's do that in the next step.
 
-# Checkpoint 3: 📘 Minting the NFT’s
+# Checkpoint 3: ✏️ Minting the NFT’s
 
 > In a terminal, run `npm run mint`. 
 
@@ -100,7 +100,7 @@ This will set up the user's account so it can receive NFTs.
 
 ---
 
-# Checkpoint 4: 💾 Transfer an NFT
+# Checkpoint 5: 💾 Transfer an NFT
 
 > 📔 Log out of your account and go back to the Service Account. In one of the NFT boxes, copy and paste `0x179b6b1cb6755e31` and click `Transfer`:
 
@@ -110,17 +110,17 @@ This will transfer an NFT to the `0x179b6b1cb6755e31` account. Log in to that ac
 
 ---
 
-# Checkpoint 5: 💾 Deploy it to testnet!
+# Checkpoint 6: 💾 Deploy it to testnet!
 
 📔 Ready to deploy to a public testnet?!?
 
 > 🔐 Generate a **deployer address** by typing `flow keys generate --network=testnet` into a terminal. Make sure to save your public key and private key somewhere, you will need them soon.
 
-<img src="https://i.imgur.com/HbF4C73.png" alt="generate key pair" />
+<img src="https://i.imgur.com/Rf0f1ox.png" alt="generate key pair" />
 
 > 👛 Create your **deployer account** by going to https://testnet-faucet.onflow.org/, pasting in your public key from above, and clicking `CREATE ACCOUNT`: 
 
-<img src="https://i.imgur.com/73OjT3K.png" alt="configure testnet account on the website" />
+<img src="https://i.imgur.com/mkNCf1o.png" alt="configure testnet account on the website" />
 
 > After it finishes, click `COPY ADDRESS` and make sure to save that address somewhere. You will need it!
 
@@ -169,7 +169,7 @@ This will transfer an NFT to the `0x179b6b1cb6755e31` account. Log in to that ac
 flow project deploy --network=testnet
 ```
 
-<img src="https://i.imgur.com/GBFs2Uz.png" alt="deploy contract to testnet" />
+<img src="https://i.imgur.com/jeOffJh.png" alt="deploy contract to testnet" />
 
 > Lastly, configure your .env file to point to Flow TestNet so we can interact with your new contract.
 
