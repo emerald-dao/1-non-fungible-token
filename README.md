@@ -182,6 +182,14 @@ You can now terminate all your terminals since we no longer need to run our own 
 
 ---
 
+# 📝 Make Edits!
+
+🔏 You can also check out your smart contract `ExampleNFT.cdc` in `flow/cadence/ExampleNFT.cdc`.
+
+💼 Take a quick look at how your contract get deployed in `flow.json`.
+
+📝 If you want to make frontend edits, open `index.js` in `pages/index.js`.
+
 # ⚔️ Side Quests
 
 > 🏃 Head to your next challenge [here](https://github.com/emerald-dao/2-simple-marketplace).
