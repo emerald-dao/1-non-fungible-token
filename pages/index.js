@@ -18,6 +18,10 @@ export default function Home() {
     fcl.currentUser().subscribe(setUser);
   }, [])
 
+  useEffect(() => {
+    setList([]);
+  }, [user])
+
   async function getNFTs() {
 
     const result = await fcl.send([
@@ -82,7 +86,7 @@ export default function Home() {
 
   async function transferNFT(recipient, withdrawID) {
 
-    const result = await fcl.send([
+    const transactionId = await fcl.send([
       fcl.transaction`
       import ExampleNFT from 0xDeployer
       import NonFungibleToken from 0xDeployer

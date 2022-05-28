@@ -143,16 +143,6 @@ pub contract ExampleNFT: NonFungibleToken {
         self.CollectionStoragePath = /storage/ExampleNFTCollection
         self.CollectionPublicPath = /public/ExampleNFTCollection
 
-        // Create a Collection resource and save it to storage
-        let collection <- create Collection()
-        self.account.save(<- collection, to: self.CollectionStoragePath)
-
-        // create a public capability for the collection
-        self.account.link<&ExampleNFT.Collection{NonFungibleToken.CollectionPublic, MetadataViews.ResolverCollection}>(
-            self.CollectionPublicPath,
-            target: self.CollectionStoragePath
-        )
-
         emit ContractInitialized()
     }
 }
