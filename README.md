@@ -1,6 +1,6 @@
 # 💎 Emerald Academy
 
-## 🚩 Challenge 1: 🍀 Simple NFT 🤓
+## 🚩 Challenge 1: 🍀 NonFungibleToken 🤓
 
 🎫 Deploy your own NFT contract to learn the basics of the Flow blockchain and Cadence. You'll use:
 - The local Flow emulator to deploy smart contracts. 
