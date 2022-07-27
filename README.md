@@ -1,6 +1,6 @@
 # 💎 Emerald Academy
 
-## 🚩 Challenge 1: 🍀 NonFungibleToken 🤓
+## 🚩 Challenge 1: NonFungibleToken
 
 🎫 Deploy your own NFT contract to learn the basics of the Flow blockchain and Cadence. You'll use:
 - The local Flow emulator to deploy smart contracts. 
@@ -13,7 +13,7 @@
 
 ---
 
-# Checkpoint 0: 📦 Install 📚
+# 📦 Checkpoint 0: Install
 
 Required: 
 * [Git](https://git-scm.com/downloads)
@@ -55,7 +55,7 @@ flow dev-wallet
 
 ---
 
-# Checkpoint 1: 👛 Wallets
+# 👛 Checkpoint 1: Wallets
 
 > 🔥 We'll be using **the local Flow dev wallet**.
 
@@ -63,7 +63,7 @@ flow dev-wallet
 
 ---
 
-# Checkpoint 2: 👀 See your NFTs
+# 👀 Checkpoint 2: See your NFTs
 
 > After logging in to the account with address `0xf8d6e0586b0a20c7`, click the `Get NFTs` button. Notice that you get an error:
 
@@ -71,7 +71,7 @@ flow dev-wallet
 
 The reason for this is because we haven't set up the user's account. Let's do that in the next step.
 
-# Checkpoint 3: ✏️ Minting the NFT’s
+# ✏️ Checkpoint 3: Minting the NFT’s
 
 > In a terminal, run `npm run mint`. 
 
@@ -85,7 +85,7 @@ This will automatically set up the user's account and mint 3 NFTs to their addre
 
 ---
 
-# Checkpoint 4: 📘 Setup empty user Collection 
+# 📘 Checkpoint 4: Setup empty user Collection 
 
 > Log out of the current account and login to another account. Click `Get NFTs` again. You will see an error appear:
 
@@ -101,7 +101,7 @@ This will set up the user's account so it can receive NFTs.
 
 ---
 
-# Checkpoint 5: 💾 Transfer an NFT
+# 💾 Checkpoint 5: Transfer an NFT
 
 > 📔 Log out of your account and go back to the Service Account. In one of the NFT boxes, copy and paste `0x179b6b1cb6755e31` and click `Transfer`:
 
@@ -111,7 +111,7 @@ This will transfer an NFT to the `0x179b6b1cb6755e31` account. Log in to that ac
 
 ---
 
-# Checkpoint 6: 💾 Deploy it to testnet!
+# 💾 Checkpoint 6: Deploy it to testnet!
 
 📔 Ready to deploy to a public testnet?!?
 
