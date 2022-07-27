@@ -1,5 +1,5 @@
 {
-  "name": "1-simple-nft",
+  "name": "1-non-fungible-token",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,8 +10,7 @@
     "mint": "node ./actions/mint_nfts.js"
   },
   "dependencies": {
-    "@onflow/fcl": "^0.0.78",
-    "@onflow/types": "^0.0.6",
+    "@onflow/fcl": "1.1.0",
     "dotenv": "^16.0.1",
     "elliptic": "^6.5.4",
     "next": "12.1.6",

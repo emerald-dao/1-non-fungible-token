@@ -21,13 +21,13 @@ Required:
 * [Flow CLI](https://docs.onflow.org/flow-cli/install/)  (🧨 Make sure to install the correct link for your system 🧨). You know you have installed it if you type `flow version` in your terminal and it prints a version.
 
 ```sh
-git clone https://github.com/emerald-dao/1-simple-nft.git
+git clone https://github.com/emerald-dao/1-non-fungible-token.git
 ```
 
 > in a terminal window, 📱 install the dependencies start your frontend:
 
 ```sh
-cd 1-simple-nft
+cd 1-non-fungible-token
 npm install
 npm run dev
 ```
@@ -35,7 +35,7 @@ npm run dev
 > in a second terminal window, start your 👷‍ local emulator:
 
 ```bash
-cd 1-simple-nft
+cd 1-non-fungible-token
 flow emulator start -v
 ```
 
@@ -44,7 +44,7 @@ flow emulator start -v
 > in a third terminal window, 💾 deploy your contract and 💸 start your local wallet:
 
 ```bash
-cd 1-simple-nft
+cd 1-non-fungible-token
 flow project deploy
 flow dev-wallet
 ```

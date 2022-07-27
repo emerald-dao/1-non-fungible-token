@@ -1,5 +1,4 @@
 const fcl = require("@onflow/fcl");
-const t = require("@onflow/types");
 // import { mint_nfts } from "../flow/cadence/interactions.js";
 const { serverAuthorization } = require("./auth/authorization.js");
 require("../flow/config.js");
@@ -18,8 +17,8 @@ async function mintNFTs() {
   ];
 
   try {
-    const transactionId = await fcl.send([
-      fcl.transaction`
+    const transactionId = await fcl.mutate({
+      cadence: `
       import ExampleNFT from 0xDeployer
       import NonFungibleToken from 0xDeployer
       import MetadataViews from 0xDeployer
@@ -46,18 +45,18 @@ async function mintNFTs() {
         }
       }
       `,
-      fcl.args([
-        fcl.arg(names, t.Array(t.String)),
-        fcl.arg(descriptions, t.Array(t.String)),
-        fcl.arg(thumbnails, t.Array(t.String))
-      ]),
-      fcl.proposer(serverAuthorization),
-      fcl.payer(serverAuthorization),
-      fcl.authorizations([serverAuthorization]),
-      fcl.limit(999)
-    ]).then(fcl.decode);
+      args: (arg, t) => [
+        arg(names, t.Array(t.String)),
+        arg(descriptions, t.Array(t.String)),
+        arg(thumbnails, t.Array(t.String))
+      ],
+      proposer: serverAuthorization,
+      payer: serverAuthorization,
+      authorizations: [serverAuthorization],
+      limit: 999
+    });
 
-    console.log({ transactionId });
+    console.log('Transaction Id', transactionId);
   } catch (e) {
     console.log(e);
   }
