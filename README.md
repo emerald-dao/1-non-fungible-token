@@ -164,7 +164,7 @@ This will transfer an NFT to the `0x179b6b1cb6755e31` account. Log in to that ac
 }
 ```
 
-> 🚀 Deploy your HelloWorld smart contract:
+> 🚀 Deploy your ExampleNFT smart contract:
 
 ```sh
 flow project deploy --network=testnet
@@ -176,8 +176,9 @@ flow project deploy --network=testnet
 
 In your .env file, change the following:
 1. `NEXT_PUBLIC_CONTRACT_ADDRESS` to your generated testnet address
-2. `NEXT_PUBLIC_ACCESS_NODE` to `https://testnet.onflow.org`
-3. `NEXT_PUBLIC_WALLET` to `https://fcl-discovery.onflow.org/testnet/authn` 
+2. `PRIVATE_KEY` to your private key
+3. `NEXT_PUBLIC_ACCESS_NODE` to `https://testnet.onflow.org` 
+4. `NEXT_PUBLIC_WALLET` to `https://fcl-discovery.onflow.org/testnet/authn`
 
 You can now terminate all your terminals since we no longer need to run our own local blockchain or wallet. Everything lives on testnet!
 
