@@ -186,7 +186,7 @@ export default function Home() {
                     </div>
                     <p className='text-gray-300 text-md'>{nft.description}</p>
                     <div className='flex justify-center py-2'>
-                      <img src={`https://ipfs.io/ipfs/${nft.thumbnail.url}`} width={150} />
+                      <img src={`https://cloudflare-ipfs.com/ipfs/${nft.thumbnail.url}`} width={150} />
                     </div>
                     <div className='flex flex-col pt-2'>
                       <input className="px-4 mb-1 py-1 focus:outline-none focus:border-[#38E8C6] focus:border-2 bg-green-100 border rounded-lg border-[#38E8C6]" type="text" onChange={e => setRecipient(e.target.value)} />
