@@ -1,5 +1,4 @@
 const fcl = require("@onflow/fcl");
-// import { mint_nfts } from "../flow/cadence/interactions.js";
 const { serverAuthorization } = require("./auth/authorization.js");
 require("../flow/config.js");
 
@@ -20,8 +19,8 @@ async function mintNFTs() {
     const transactionId = await fcl.mutate({
       cadence: `
       import ExampleNFT from 0xDeployer
-      import NonFungibleToken from 0xDeployer
-      import MetadataViews from 0xDeployer
+      import NonFungibleToken from 0xStandard
+      import MetadataViews from 0xStandard
       
       transaction(names: [String], descriptions: [String], thumbnails: [String]) {
         let RecipientCollection: &ExampleNFT.Collection{NonFungibleToken.CollectionPublic}
