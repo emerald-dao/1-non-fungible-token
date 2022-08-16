@@ -69,7 +69,7 @@ We'll be using **the local Flow dev wallet**.
 
 <img src="https://i.imgur.com/aM6gV2G.png" alt="error when getting NFTs" width="400" />
 
-The reason for this is because we haven't set up the user's account. Let's do that now.
+The reason for this is because we haven't set up the user's account to be able to receive NFTs. On Flow, accounts needs to have a collection in their account to store specific NFTs. Let's set that up that now.
 
 > Click the `Setup Collection` button:
 
