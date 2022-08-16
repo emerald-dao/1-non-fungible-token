@@ -1,6 +1,6 @@
 import ExampleNFT from "../ExampleNFT.cdc"
-import NonFungibleToken from "../NonFungibleToken.cdc"
-import MetadataViews from "../MetadataViews.cdc"
+import NonFungibleToken from "../utility/NonFungibleToken.cdc"
+import MetadataViews from "../utility/MetadataViews.cdc"
 
 transaction(name: String, description: String, thumbnail: String) {
   let RecipientCollection: &ExampleNFT.Collection{NonFungibleToken.CollectionPublic}
