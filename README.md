@@ -69,15 +69,25 @@ flow dev-wallet
 
 <img src="https://i.imgur.com/aM6gV2G.png" alt="error when getting NFTs" />
 
-The reason for this is because we haven't set up the user's account. Let's do that in the next step.
+The reason for this is because we haven't set up the user's account. Let's do that now.
+
+> Click the `Setup Collection` button:
+
+<img src="https://i.imgur.com/VvaLKkW.png" alt="setup collection for user account" />
+
+This will set up the user's account so it can receive NFTs.
+
+> Try clicking `Get NFTs`. You will see no NFTs appear. So let's transfer some from the other account!
 
 # ✏️ Checkpoint 3: Minting the NFT’s
 
-> In a terminal, run `npm run mint`. 
+Now that we have set up the user's account, we can mint some NFTs to it.
 
-<img src="https://i.imgur.com/r9zppoi.png" alt="mint NFTs transaction" />
+> In a terminal, run `npm run mint 0xf8d6e0586b0a20c7`
 
-This will automatically set up the user's account and mint 3 NFTs to their address (`0xf8d6e0586b0a20c7`).
+<img src="https://i.imgur.com/4JrUbw1.png" alt="mint NFTs transaction" />
+
+This will int 3 NFTs to the supplied address (`0xf8d6e0586b0a20c7`).
 
 > Go back to your application and click `Get NFTs` again. Notice that 3 NFTs appear! Woooohoooo.
 
@@ -91,7 +101,7 @@ This will automatically set up the user's account and mint 3 NFTs to their addre
 
 <img src="https://i.imgur.com/GjCa4NF.png" alt="error when getting NFTs" />
 
-Again, this is because we haven't set up the user's account. This time, we will do it manually by clicking the `Setup Collection` button:
+Again, this is because we haven't set up the user's account. We will do this again by clicking the `Setup Collection` button:
 
 <img src="https://i.imgur.com/VvaLKkW.png" alt="setup collection for user account" />
 
@@ -182,7 +192,15 @@ In your .env file, change the following:
 
 You can now terminate all your terminals since we no longer need to run our own local blockchain or wallet. Everything lives on testnet!
 
-> Run `npm run dev` to start your application in a terminal, and have a blast with your DApp!
+> Run `npm run dev` to start your application in a terminal.
+
+> On `http://localhost:3000`, click "connect" and log in to your Blocto or Lilico wallet, making sure to copy the address you log in with.
+
+<img src="https://i.imgur.com/dvYO2aU.png" alt="logging into discovery" />
+
+> In a terminal, run `npm run mint [THE ADDRESS YOU COPIED ABOVE]`
+
+> Click "Get NFTs", and you should see all your NFTs in your account!
 
 ---
 
