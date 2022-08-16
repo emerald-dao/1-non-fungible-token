@@ -155,14 +155,13 @@ This will transfer an NFT to the `0x179b6b1cb6755e31` account. Log in to that ac
   },
   "testnet": {
     "testnet-account": [
-      "NonFungibleToken",
-      "FungibleToken",
-      "MetadataViews",
       "ExampleNFT"
     ]
   }
 }
 ```
+
+Notice that we do not want to re-deploy NonFungibleToken, FungibleToken, or MetadataViews. That is because they are already deploy and live on Flow testnet!
 
 > 🚀 Deploy your ExampleNFT smart contract:
 
@@ -176,9 +175,10 @@ flow project deploy --network=testnet
 
 In your .env file, change the following:
 1. `NEXT_PUBLIC_CONTRACT_ADDRESS` to your generated testnet address
-2. `PRIVATE_KEY` to your private key
-3. `NEXT_PUBLIC_ACCESS_NODE` to `https://rest-testnet.onflow.org` 
-4. `NEXT_PUBLIC_WALLET` to `https://fcl-discovery.onflow.org/testnet/authn`
+2. `NEXT_PUBLIC_STANDARD_ADDRESS` to `0x631e88ae7f1d7c20`
+3. `PRIVATE_KEY` to your private key
+4. `NEXT_PUBLIC_ACCESS_NODE` to `https://rest-testnet.onflow.org` 
+5. `NEXT_PUBLIC_WALLET` to `https://fcl-discovery.onflow.org/testnet/authn`
 
 You can now terminate all your terminals since we no longer need to run our own local blockchain or wallet. Everything lives on testnet!
 
