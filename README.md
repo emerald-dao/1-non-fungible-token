@@ -194,7 +194,7 @@ You can now terminate all your terminals since we no longer need to run our own 
 
 > Run `npm run dev` to start your application in a terminal.
 
-> On `http://localhost:3000`, click "connect" and log in to your Blocto or Lilico wallet, making sure to copy the address you log in with.
+> On `http://localhost:3000/`, click "connect" and log in to your Blocto or Lilico wallet, making sure to copy the address you log in with.
 
 <img src="https://i.imgur.com/dvYO2aU.png" alt="logging into discovery" />
 
