@@ -67,13 +67,13 @@ We'll be using **the local Flow dev wallet**.
 
 > After logging in to the account with address `0xf8d6e0586b0a20c7`, click the `Get NFTs` button. Notice that you get an error:
 
-<img src="https://i.imgur.com/aM6gV2G.png" alt="error when getting NFTs" />
+<img src="https://i.imgur.com/aM6gV2G.png" alt="error when getting NFTs" width="400" />
 
 The reason for this is because we haven't set up the user's account. Let's do that now.
 
 > Click the `Setup Collection` button:
 
-<img src="https://i.imgur.com/VvaLKkW.png" alt="setup collection for user account" />
+<img src="https://i.imgur.com/VvaLKkW.png" alt="setup collection for user account" width="400" />
 
 This will set up the user's account so it can receive NFTs.
 
@@ -99,11 +99,11 @@ This will int 3 NFTs to the supplied address (`0xf8d6e0586b0a20c7`).
 
 > Log out of the current account and login to another account. Click `Get NFTs` again. You will see an error appear:
 
-<img src="https://i.imgur.com/GjCa4NF.png" alt="error when getting NFTs" />
+<img src="https://i.imgur.com/GjCa4NF.png" alt="error when getting NFTs" width="400" />
 
 Again, this is because we haven't set up the user's account. We will do this again by clicking the `Setup Collection` button:
 
-<img src="https://i.imgur.com/VvaLKkW.png" alt="setup collection for user account" />
+<img src="https://i.imgur.com/VvaLKkW.png" alt="setup collection for user account" width="400" />
 
 This will set up the user's account so it can receive NFTs.
 
@@ -131,7 +131,7 @@ This will transfer an NFT to the `0x179b6b1cb6755e31` account. Log in to that ac
 
 > 👛 Create your **deployer account** by going to https://testnet-faucet.onflow.org/, pasting in your public key from above, and clicking `CREATE ACCOUNT`: 
 
-<img src="https://i.imgur.com/mkNCf1o.png" alt="configure testnet account on the website" />
+<img src="https://i.imgur.com/mkNCf1o.png" alt="configure testnet account on the website" width="400" />
 
 > After it finishes, click `COPY ADDRESS` and make sure to save that address somewhere. You will need it!
 
