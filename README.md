@@ -77,7 +77,7 @@ The reason for this is because we haven't set up the user's account. Let's do th
 
 This will set up the user's account so it can receive NFTs.
 
-> Try clicking `Get NFTs`. You will see no NFTs appear. So let's transfer some from the other account!
+> Try clicking `Get NFTs`. You will see no NFTs appear. So let's mint some NFTs!
 
 # ✏️ Checkpoint 3: Minting the NFT’s
 
