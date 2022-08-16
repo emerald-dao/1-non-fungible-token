@@ -57,9 +57,9 @@ flow dev-wallet
 
 # 👛 Checkpoint 1: Wallets
 
-> 🔥 We'll be using **the local Flow dev wallet**.
+We'll be using **the local Flow dev wallet**.
 
-> 👛 Click the "Log In" button and notice a window appears with different accounts to select, each with their own Flow Token balance. Select the first account to log in to it.
+> Click the "Log In" button and notice a window appears with different accounts to select, each with their own Flow Token balance. Select the first account to log in to it.
 
 ---
 
