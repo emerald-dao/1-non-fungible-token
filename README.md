@@ -169,7 +169,7 @@ Notice that we do not want to re-deploy NonFungibleToken, FungibleToken, or Meta
 flow project deploy --network=testnet
 ```
 
-<img src="https://i.imgur.com/jeOffJh.png" alt="deploy contract to testnet" />
+<img src="https://i.imgur.com/9rfZNhr.png" alt="deploy contract to testnet" />
 
 > Lastly, configure your .env file to point to Flow TestNet so we can interact with your new contract.
 
