@@ -2,7 +2,7 @@ const fcl = require("@onflow/fcl");
 const { serverAuthorization } = require("./auth/authorization.js");
 require("../flow/config.js");
 
-async function mintNFTs() {
+async function mintNFTs(recipient) {
   const names = ["Education", "Building", "Governance"];
   const descriptions = [
     "This is the logo of the Education Guild",
@@ -20,19 +20,14 @@ async function mintNFTs() {
       cadence: `
       import ExampleNFT from 0xDeployer
       import NonFungibleToken from 0xStandard
-      import MetadataViews from 0xStandard
       
-      transaction(names: [String], descriptions: [String], thumbnails: [String]) {
+      transaction(names: [String], descriptions: [String], thumbnails: [String], recipient: Address) {
         let RecipientCollection: &ExampleNFT.Collection{NonFungibleToken.CollectionPublic}
         
-        prepare(signer: AuthAccount) {
-          if signer.borrow<&ExampleNFT.Collection>(from: ExampleNFT.CollectionStoragePath) == nil {
-            signer.save(<- ExampleNFT.createEmptyCollection(), to: ExampleNFT.CollectionStoragePath)
-            signer.link<&ExampleNFT.Collection{NonFungibleToken.CollectionPublic, MetadataViews.ResolverCollection}>(ExampleNFT.CollectionPublicPath, target: ExampleNFT.CollectionStoragePath)
-          }
-      
-          self.RecipientCollection = signer.getCapability(ExampleNFT.CollectionPublicPath)
-                                      .borrow<&ExampleNFT.Collection{NonFungibleToken.CollectionPublic}>()!
+        prepare(signer: AuthAccount) {      
+          self.RecipientCollection = getAccount(recipient).getCapability(ExampleNFT.CollectionPublicPath)
+                                      .borrow<&ExampleNFT.Collection{NonFungibleToken.CollectionPublic}>()
+                                      ?? panic("The recipient has not set up an ExampleNFT Collection yet.")
         }
       
         execute {
@@ -47,7 +42,8 @@ async function mintNFTs() {
       args: (arg, t) => [
         arg(names, t.Array(t.String)),
         arg(descriptions, t.Array(t.String)),
-        arg(thumbnails, t.Array(t.String))
+        arg(thumbnails, t.Array(t.String)),
+        arg(recipient, t.Address)
       ],
       proposer: serverAuthorization,
       payer: serverAuthorization,
@@ -61,4 +57,4 @@ async function mintNFTs() {
   }
 }
 
-mintNFTs();
+mintNFTs(process.argv.slice(2)[0]);
