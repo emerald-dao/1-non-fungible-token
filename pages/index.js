@@ -25,7 +25,7 @@ export default function Home() {
     const result = await fcl.query({
       cadence: `
       import ExampleNFT from 0xDeployer
-      import MetadataViews from 0xDeployer
+      import MetadataViews from 0xStandard
 
       pub fun main(address: Address): [NFT] {
         let collection = getAccount(address).getCapability(ExampleNFT.CollectionPublicPath)
@@ -83,7 +83,7 @@ export default function Home() {
     const transactionId = await fcl.mutate({
       cadence: `
       import ExampleNFT from 0xDeployer
-      import NonFungibleToken from 0xDeployer
+      import NonFungibleToken from 0xStandard
 
       transaction(recipient: Address, withdrawID: UInt64) {
         let ProviderCollection: &ExampleNFT.Collection{NonFungibleToken.Provider}
@@ -113,7 +113,6 @@ export default function Home() {
     });
 
     console.log('Transaction Id', transactionId);
-    setList(result);
   }
 
   async function setupCollection() {
@@ -121,8 +120,8 @@ export default function Home() {
     const transactionId = await fcl.mutate({
       cadence: `
       import ExampleNFT from 0xDeployer
-      import NonFungibleToken from 0xDeployer
-      import MetadataViews from 0xDeployer
+      import NonFungibleToken from 0xStandard
+      import MetadataViews from 0xStandard
 
       transaction() {
         
@@ -187,7 +186,7 @@ export default function Home() {
                     </div>
                     <p className='text-gray-300 text-md'>{nft.description}</p>
                     <div className='flex justify-center py-2'>
-                      <img src={`https://ipfs.infura.io/ipfs/${nft.thumbnail.url}`} width={150} />
+                      <img src={`https://ipfs.io/ipfs/${nft.thumbnail.url}`} width={150} />
                     </div>
                     <div className='flex flex-col pt-2'>
                       <input className="px-4 mb-1 py-1 focus:outline-none focus:border-[#38E8C6] focus:border-2 bg-green-100 border rounded-lg border-[#38E8C6]" type="text" onChange={e => setRecipient(e.target.value)} />
