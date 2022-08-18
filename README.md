@@ -13,6 +13,12 @@
 
 ---
 
+# Video Walkthrough
+
+Want a video walkthrough? Check out Jacob Tucker's walkthrough here: [![Challenge #1 (NonFungibleToken) Walkthrough](https://i.imgur.com/BmiGz8T.jpg)](https://www.youtube.com/watch?v=MYEON2T7z9c "Emerald Academy - Challenge #1 (NonFungibleToken) Walkthrough")
+
+---
+
 # 📦 Checkpoint 0: Install
 
 Required: 
@@ -87,7 +93,7 @@ Now that we have set up the user's account, we can mint some NFTs to it.
 
 <img src="https://i.imgur.com/4JrUbw1.png" alt="mint NFTs transaction" />
 
-This will int 3 NFTs to the supplied address (`0xf8d6e0586b0a20c7`).
+This will mint 3 NFTs to the supplied address (`0xf8d6e0586b0a20c7`).
 
 > Go back to your application and click `Get NFTs` again. Notice that 3 NFTs appear! Woooohoooo.
 
