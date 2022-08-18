@@ -8,7 +8,7 @@ a different kind of metadata, such as a creator biography
 or a JPEG image file.
 */
 
-import FungibleToken from "./utility/FungibleToken.cdc"
+import FungibleToken from "./FungibleToken.cdc"
 
 pub contract MetadataViews {
 
