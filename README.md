@@ -204,7 +204,9 @@ You can now terminate all your terminals since we no longer need to run our own 
 
 <img src="https://i.imgur.com/dvYO2aU.png" alt="logging into discovery" />
 
-> In a terminal, run `npm run mint [THE ADDRESS YOU COPIED ABOVE]`
+> Click "Setup Collection" to give yourself a collection and the ability to store NFTs in your account.
+
+> In a terminal, run `npm run mint [THE ADDRESS OF THE ACCOUNT YOU'RE LOGGED IN TO]`
 
 In your terminal, you should see a printed "Transaction Id". If you go to [Testnet Flowscan](https://testnet.flowscan.org/) and paste in that Transaction Id, you should see information about that minting transaction.
 
