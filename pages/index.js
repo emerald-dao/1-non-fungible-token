@@ -126,6 +126,8 @@ export default function Home() {
       transaction() {
         
         prepare(signer: AuthAccount) {
+          destroy signer.load<@ExampleNFT.Collection>(from: ExampleNFT.CollectionStoragePath)
+          signer.unlink(ExampleNFT.CollectionPublicPath)
           if signer.borrow<&ExampleNFT.Collection>(from: ExampleNFT.CollectionStoragePath) == nil {
             signer.save(<- ExampleNFT.createEmptyCollection(), to: ExampleNFT.CollectionStoragePath)
             signer.link<&ExampleNFT.Collection{NonFungibleToken.CollectionPublic, MetadataViews.ResolverCollection}>(ExampleNFT.CollectionPublicPath, target: ExampleNFT.CollectionStoragePath)
@@ -162,7 +164,7 @@ export default function Home() {
             <h1 className='border px-7 text-center text-[#38E8C6] text-sm py-1 rounded-xl border-[#38E8C6] w-56'>{user.loggedIn ? user.addr : "Please connect wallet -->"}</h1>
           </div>
           <div>{!user.loggedIn ? <button className='border rounded-xl border-[#38E8C6] px-5 text-sm text-[#38E8C6] py-1'
-            onClick={fcl.authenticate}>connect</button> : <button className='border rounded-xl border-[#38E8C6]
+            onClick={fcl.authenticate}>Connect</button> : <button className='border rounded-xl border-[#38E8C6]
           px-5 text-sm text-[#38E8C6] py-1' onClick={fcl.unauthenticate}>Logout</button>}
           </div>
         </div>
