@@ -11,7 +11,7 @@ transaction() {
       tutorial is because there's a chance that, on testnet, someone already has 
       a collection here and it will mess with the tutorial.
     */
-    destroy signer.load<@ExampleNFT.Collection>(from: ExampleNFT.CollectionStoragePath)
+    destroy signer.load<@NonFungibleToken.Collection>(from: ExampleNFT.CollectionStoragePath)
     signer.unlink(ExampleNFT.CollectionPublicPath)
 
     // This is the only part you would have.

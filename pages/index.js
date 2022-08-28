@@ -126,7 +126,7 @@ export default function Home() {
       transaction() {
         
         prepare(signer: AuthAccount) {
-          destroy signer.load<@ExampleNFT.Collection>(from: ExampleNFT.CollectionStoragePath)
+          destroy signer.load<@NonFungibleToken.Collection>(from: ExampleNFT.CollectionStoragePath)
           signer.unlink(ExampleNFT.CollectionPublicPath)
           if signer.borrow<&ExampleNFT.Collection>(from: ExampleNFT.CollectionStoragePath) == nil {
             signer.save(<- ExampleNFT.createEmptyCollection(), to: ExampleNFT.CollectionStoragePath)
