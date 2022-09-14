@@ -15,6 +15,7 @@
 		"FungibleToken": {
 			"source": "./flow/cadence/utility/FungibleToken.cdc",
 			"aliases": {
+				"emulator": "0xee82856bf20e2aa6",
 				"testnet": "0x9a0766d93b6608b7"
 			}
 		},
@@ -41,7 +42,6 @@
 		"emulator": {
 			"emulator-account": [
 				"NonFungibleToken",
-				"FungibleToken",
 				"MetadataViews",
 				"ExampleNFT"
 			]

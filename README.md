@@ -164,7 +164,6 @@ This will transfer an NFT to the `0x179b6b1cb6755e31` account. Log in to that ac
   "emulator": {
     "emulator-account": [
       "NonFungibleToken",
-      "FungibleToken",
       "MetadataViews",
       "ExampleNFT"
 		]
@@ -177,7 +176,7 @@ This will transfer an NFT to the `0x179b6b1cb6755e31` account. Log in to that ac
 }
 ```
 
-Notice that we do not want to re-deploy NonFungibleToken, FungibleToken, or MetadataViews. That is because they are already deploy and live on Flow testnet!
+Notice that we do not want to re-deploy NonFungibleToken or MetadataViews. That is because they are already deploy and live on Flow testnet!
 
 > 🚀 Deploy your ExampleNFT smart contract:
 
