@@ -14,6 +14,7 @@ transaction(names: [String], descriptions: [String], thumbnails: [String], recip
     var i = 0
     while i < names.length {
       ExampleNFT.mintNFT(recipient: self.RecipientCollection, name: names[i], description: descriptions[i], thumbnail: thumbnails[i])
+      i = i + 1
     }
   }
 }
