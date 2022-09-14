@@ -140,9 +140,10 @@ pub contract ExampleNFT: NonFungibleToken {
         self.totalSupply = 0
 
         // Set the named paths
-        self.CollectionStoragePath = /storage/ExampleNFTCollection
-        self.CollectionPublicPath = /public/ExampleNFTCollection
+        self.CollectionStoragePath = /storage/EmeraldAcademyNonFungibleTokenCollection
+        self.CollectionPublicPath = /public/EmeraldAcademyNonFungibleTokenCollection
 
         emit ContractInitialized()
     }
 }
+ 
